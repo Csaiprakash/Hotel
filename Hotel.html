@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Hotel Sai</title>
+</head>
+<body>
+    <style>
+        *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.logo{
+    display: flex;
+}
+.logo img{
+    width:10%;
+    height:25%;
+    
+}
+.logo span{
+    color:green;
+}
+.flex_space{
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    border:none;
+    background: none;
+    outline: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+header .navbar ul li i{
+    margin-left:20px;
+    border:1px solid #eee;
+    background:#eee;
+    color:black;
+    font-size:20px;
+    padding:5px 6px;
+}
+header .navbar ul li i:hover{
+    background: green;
+    color:white;
+}
+header .navbar .fa-user{
+    margin-left:20px;
+    border:1px solid #eee;
+    background: #eee;
+    color:black;
+    font-size: 20px;
+    padding:5px 6px;
+}
+header .navbar .fa-user:hover{
+    background: green;
+    color:white;
+}
+.container{
+    max-width:85%;
+    margin: auto;
+}
+header{
+    height:10vh;
+    line-height: 10vh;
+    padding: 0 20px;
+}
+header button{
+    line-height: 2.5vh;
+    padding:8px 20px;
+}
+header img{
+    margin: 27px 0;
+}
+header ul{
+    display: inline-block;
+}
+header ul li{
+    display: inline-block;
+    text-transform: uppercase;
+}
+header ul li a{
+    margin:0 20px;
+    color:black;
+    transition: 0.5s;
+}
+header ul li a:hover{
+    color:green;
+}
+header i{
+    margin:0px 3px;
+}
+header .fa-bars{
+    display: none;
+}
+@media only screen and (max-width:768px){
+    header ul{
+        position: absolute;
+        top:100px;
+        left:0;
+        width:100%;
+        height:100vh;
+        background:#009f7f;
+        overflow:hidden;
+        text-align: center;
+        transition: max-height 0.5s;
+        z-index:9;
+    }
+    header ul li{
+        display: block;
+    }
+    header ul li a{
+        color:white;
+    }
+    header i{
+        color:white;
+    }
+    header .navbar span{
+        color:black;
+        display: block;
+        cursor: pointer;
+        line-height:10vh;
+        font-size:25px;
+    }
+}
+.images img{
+    height:675px;
+    width:100%;
+    overflow:hidden;
+    position: relative;
+}
+.img-btn h1{
+    position:absolute;
+    bottom:20px;
+    margin-left:50px;
+    padding-bottom: 300px;
+    font-size: 70px;
+    color:red;
+}
+.img-btn p{
+    position:absolute;
+    bottom:20px;
+    margin-left:50px;
+    padding-bottom: 280px;
+    font-size:20px;
+    color:white;
+}
+.img-btn .btn1{
+    position:absolute;
+    bottom:20px;
+    margin-left:50px;
+    margin-bottom: 200px;
+    border:3px solid green;
+    background: green;
+    padding:8px 13px;
+    color:white;
+}
+.btn1:hover{
+    background-color: red;
+    color:green;
+    border:2px solid red;
+    transform: scale(1.2);
+}
+.img-btn .btn2{
+    position:absolute;
+    bottom:20px;
+    margin-left:200px;
+    margin-bottom: 200px;
+    border:2px solid white;
+    padding:8px 13px;
+    color:white;
+}
+.btn2:hover{
+    background-color: white;
+    color:green;
+    transform: scale(1.2);
+}
+.book{
+    display:flex;
+    width:100%;
+    height:150px;
+    background-color:rgb(41, 41, 56);
+    margin-top:-10px;
+}
+.book h1{
+    color:white;
+    margin-left:20px;
+    margin-top:25px;
+    width:180px;
+    line-height:40px;
+}
+.book h1 span{
+    color:green;
+}
+.book form{
+    margin-top:60px;
+    margin-left:160px;
+}
+.book input{
+    margin-left:25px;
+    padding:5px 10px;
+}
+.book input::placeholder{
+    text-align: center;
+    color:black;
+}
+.btn3{
+    margin-left:25px;
+    border:3px solid green;
+    background: green;
+    color:white;
+    padding:5px 10px;
+}
+.btn3:hover{
+    background-color: red;
+    color:green;
+    border:2px solid red;
+    transform: scale(1.2);
+}
+.about{
+    width:100%;
+    height:500px;
+    display: flex;
+}
+.hotel h1{
+    font-size:100px;
+    margin-top:50px;
+    margin-left:200px;
+    color:#999;
+    opacity:.2;
+}
+.hotel h2{
+    font-size:60px;
+    margin-top:-100px;
+    margin-left:230px;
+    color:black;
+}
+.hotel h2 span{
+    color:green;
+}
+.hotel p{
+    width:600px;
+    margin-left:200px;
+    margin-top:30px;
+}
+.btn4{
+    margin-left:200px;
+    margin-top:30px;
+    border:3px solid green;
+    background: green;
+    color:white;
+    padding:5px 15px;
+}
+.btn4:hover{
+    background-color: red;
+    color:green;
+    border:2px solid red;
+    transform: scale(1.2);
+}
+.hotel_img img{
+    height:300px;
+    margin-top:80px;
+    margin-left:140px;
+}
+.bar{
+    position: relative;
+}
+.bar img{
+    width:100%;
+    height:150px;
+    opacity:.3;
+    position: relative;
+}
+.bar-text{
+    position:absolute;
+    top:0;
+    display: flex;
+    margin-left:250px;
+    margin-top:40px;
+}
+.bar1{
+    line-height: 30px;
+    color:blue;
+    font-size:25px;
+}
+.bar h3{
+    font-size:15px;
+}
+.bar1 .h1{
+    width:30px;
+    margin-left:20px;
+    border:1px solid blue;
+}
+.bar2{
+    margin-left:200px;
+    line-height: 30px;
+    color:blue;
+    font-size:25px;
+}
+.bar2 .h2{
+    width:30px;
+    margin-left:20px;
+    border:1px solid blue;
+}
+.bar3{
+    margin-left:200px;
+    line-height: 30px;
+    color:blue;
+    font-size:25px;
+}
+.bar3 .h3{
+    width:30px;
+    margin-left:20px;
+    border:1px solid blue;
+}
+.bar4{
+    margin-left:200px;
+    line-height: 30px;
+    color:blue;
+    font-size:25px;
+}
+.bar4 .h4{
+    width:30px;
+    margin-left:20px;
+    border:1px solid blue;
+}
+.room{
+    margin-left:200px;
+    margin-top:50px;
+}
+.room h1{
+    font-size:100px;
+    color:#999;
+    opacity:.2;
+}
+.room h2{
+    font-size:60px;
+    color:black;
+    margin-top:-100px;
+    margin-left:20px;
+}
+.room h2 span{
+    color:green;
+}
+.room p{
+    width:600px;
+    margin-top:10px;
+}
+.rooms .room-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:30px;
+    margin-top: 30px;
+}
+.rooms .room-container .box{
+    flex:1 1 400px;
+    position: relative;
+    overflow: hidden;
+    box-shadow:5px 10px rgba(0,0,0,.1);
+    border: 2px solid rgba(0,0,0,.3);
+    cursor:pointer;
+    border-radius: 5px;
+    width:500px;
+    height:400px;
+}
+.rooms .room-container .box .image{
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+   position: absolute;
+
+}
+.rooms .room-container .box .image-content h1{
+    font-size:20px;
+    color:green;
+    text-align: center;
+    margin-top:250px;
+}
+.rooms .room-container .box .image-content p{
+    margin-left:10px;
+    color:black;
+    font-size:10px;
+    text-align: center;
+}
+.rooms .room-container .box .image-content .btn5{
+    border:2px solid green;
+    background: green;
+    color:white;
+    padding:5px 15px;
+    margin-left:30px;
+    margin-top: 20px;
+}
+.rooms .room-container .box .image-content .btn5:hover{
+    background-color: red;
+    color:green;
+    border:2px solid red;
+    transform: scale(1.2);
+}
+.rooms .room-container .box .image-content h2{
+    color:green;
+    margin-left:180px;
+    margin-top:-30px;
+    font-size:20px;
+    width:50px;
+    line-height: 10px;
+}
+.rooms .room-container .box .image-content h2 span{
+    color:black;
+    font-size: 10px;
+    width:80px;
+}
+.gallary-content{
+    margin-left:200px;
+    margin-top:50px;
+}
+.gallary-content h1{
+    font-size:100px;
+    color:#999;
+    opacity:.2;
+}
+.gallary-content h2{
+    font-size:60px;
+    color:black;
+    margin-top:-100px;
+    margin-left:20px;
+}
+.gallary-content h2 span{
+    color:green;
+}
+.gallary-content p{
+    width:600px;
+    margin-top:30px;
+}
+.gallary .gallary-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:30px;
+    margin-top: 30px;
+}
+.gallary .gallary-container .box{
+    flex:1 1 400px;
+    position: relative;
+    overflow: hidden;
+    box-shadow:5px 10px rgba(0,0,0,.1);
+    border: 2px solid rgba(0,0,0,.3);
+    cursor:pointer;
+    border-radius: 5px;
+    width:500px;
+    height:400px;
+}
+.gallary .gallary-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+   position: absolute;
+}
+.gallary .gallary-container .box .content{
+    position:absolute;
+    top:-100%;left:0;
+    height: 100%;
+    width:100%;
+    background:whitesmoke;
+    line-height: 30px;
+    padding:2rem;
+    padding-top: 5rem;
+    text-align: center;
+}
+.gallary .gallary-container .box .content h1{
+    margin-bottom: 20px;
+}
+.gallary .gallary-container .box .content h1 span{
+    color:green;
+}
+.gallary .gallary-container .box .content h2{
+    margin-top:20px;
+    color:green;
+}
+.gallary .gallary-container .box .content h2 span{
+    color:red;
+} 
+.gallary .gallary-container .box .content .btn6{
+    border:2px solid green;
+    background: green;
+    color:white;
+    padding:8px 20px;
+    margin-top:20px;
+}
+.gallary .gallary-container .box .content .btn6:hover{
+    background-color: red;
+    color:green;
+    transform: scale(1.2);
+    border:2px solid red;
+}
+.gallary .gallary-container .box:hover .content{
+    top:0;
+}
+.contact{
+    width:100%;
+    height:200px;
+    margin-top:20px;
+    background-color: black;
+  }
+  .contact .us{
+    width:30px;
+    height:30px;
+    display: flex;
+    margin-left:700px;
+    
+  }
+  .contact .us img{
+    width:100%;
+    height:100%;
+    margin-top:40px;
+    margin-left:5px;
+  }
+  .bottom{
+    display: flex;
+    color:white;
+    margin-left:470px;
+    margin-top:75px;
+  }
+  .bottom a{
+    text-decoration: none;
+    margin-left:30px;
+  }
+  .contact h3{
+    color:white;
+    margin-left:450px;
+    margin-top:20px;
+    font-size: 20px;
+  }
+  .contact h3 span{
+    color:red;
+  }
+    </style>
+    <header>
+        <div class="flex_space">
+            <div class="logo">
+                <img src="Hotel1.png" alt="here">
+                <h1>HOTEL <span>TAJ</span></h1>
+            </div>
+            <div class="navbar">
+                <ul id="menulist">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#rooms">Rooms</a></li>
+                    <li><a href="#gallary">Gallary</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><i class="fas fa-search" id="search-btn"></i></li>
+                </ul>
+                <span class="fas fa-bars" onClick="menutoggle()"></span>
+                <span class="fas fa-user" id="login-btn"></span>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        var menulist=document.getElementById("menulist");
+        menulist.style.maxHeight="0px"
+        function menutoggle(){
+            if (menulist.style.maxHeight=="0px"){
+                menulist.style.maxHeight="100vh"
+            }
+            else{
+                menulist.style.maxHeight="0px"
+            }
+        }
+
+    </script>
+
+    <section class="home" id="home">
+            <div class="images">
+                <img src="https://c4.wallpaperflare.com/wallpaper/20/164/15/booking-best-hotels-bangkok-tourism-wallpaper-preview.jpg" alt="click here">
+        </div>
+        <div class="img-btn">
+            <h1>Spend Your Day</h1>
+            <p>lorem ipsum dollar sit amet constur adipisicing edit sed do minimum por incid</p>
+            <button class="btn1">READ MORE</button>
+            <button class="btn2">CONTACT US</button>
+        </div>
+        <div class="book">
+            <h1><span>Book</span> Your Rooms</h1>
+            <form>
+                <input type="date">
+                <input type="date">
+                <input type="text" placeholder="Adults">
+                <input type="text" placeholder="Children">
+                <button class="btn3">Check Availability</button>
+            </form>
+        </div>
+    </section>
+    <section class="us" id="about">
+        <div class="about">
+            <div class="hotel">
+                <h1>WELCOME</h1>
+                <h2>Hotel <span>Taj</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button class="btn4">ABOUT US</button>
+            </div>
+            <div class="hotel_img">
+                <img src="https://th.bing.com/th/id/R.c00e248c060ed4aed925f4df712bfc73?rik=uZof7xJLatEyjQ&riu=http%3a%2f%2f2.bp.blogspot.com%2f-BK4zgby_qao%2fUItjAHAcVaI%2fAAAAAAABM5s%2f_FuqMAtcPWk%2fs1600%2fluxurious-hotel-room-1920x1200-wallpaper-habitacion-de-lujo-en-un-hotel.jpg&ehk=73peerkp8rFdTdMUxrnhk95hv%2fD7S7LxyauawAL3UKk%3d&risl=&pid=ImgRaw&r=0" alt="here">
+            </div>
+        </div>
+        <div class="bar">
+            <img src="https://th.bing.com/th/id/R.4034c68e69eca35df93e9f3bb05f342a?rik=asXVK%2f1kUt7b%2bQ&riu=http%3a%2f%2fdata.1freewallpapers.com%2fdownload%2fblue-room.jpg&ehk=1lFCc7%2fg3YgHeBMB%2ffpvS4OPFZJ%2fZ8hWHlffrdZohSY%3d&risl=&pid=ImgRaw&r=0" alt="here">
+            <div class="bar-text">
+                <div class="bar1">
+                    <h1>2500</h1>
+                <hr class="h1">
+                <h3>Customers</h3>
+                </div>
+                <div class="bar2">
+                    <h1>1250</h1>
+                <hr class="h2">
+                <h3>Happy Customers</h3>
+                </div>
+                <div class="bar3">
+                    <h1>150</h1>
+                <hr class="h3">
+                <h3>Expert Technicians</h3>
+                </div>
+                <div class="bar4">
+                    <h1>3550</h1>
+                <hr class="h4">
+                <h3>Desktop Reaired</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rooms" id="rooms">
+        <div class="room">
+            <h1>EXPLORE</h1>
+            <h2>Our <span>Rooms</span></h2>
+            <p>Excepteur sint occaecat non proident,sunt in culpa qui officia deserunt</p>
+        </div>
+        <div class="room-container">
+            <div class="box">
+                <img class="image" src="https://wallpapercave.com/wp/wp6957266.jpg" alt="here">
+                <div class="image-content">
+                    <h1>Suporior Rooms</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quis fugit quam ex aperiam fugiat harum aut nisi quod, debitis hic aspernatur tempora eius impedit quos accusamus</p>
+                    <button class="btn5">Book Now</button>
+                    <h2>$250 <span>per Day</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://th.bing.com/th/id/OIP.hpkSj-fCV2EdJQFvFENR0gHaEo?w=288&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="image-content">
+                    <h1>Suporior Rooms</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quis fugit quam ex aperiam fugiat harum aut nisi quod, debitis hic aspernatur tempora eius impedit quos accusamus</p>
+                    <button class="btn5">Book Now</button>
+                    <h2>$250 <span>per Day</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://th.bing.com/th/id/OIP.-fIw982Zi2YjyNT20FnxrAHaEK?w=328&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="image-content">
+                    <h1>Suporior Rooms</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quis fugit quam ex aperiam fugiat harum aut nisi quod, debitis hic aspernatur tempora eius impedit quos accusamus</p>
+                    <button class="btn5">Book Now</button>
+                    <h2>$250 <span>per Day</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://th.bing.com/th/id/OIP.hPMbxMMrnbgNuyuf-2rEKQHaEK?w=280&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="image-content">
+                    <h1>Suporior Rooms</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quis fugit quam ex aperiam fugiat harum aut nisi quod, debitis hic aspernatur tempora eius impedit quos accusamus</p>
+                    <button class="btn5">Book Now</button>
+                    <h2>$250 <span>per Day</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://th.bing.com/th/id/OIP.3jkpOYMad-TGQTbWtRfv0AHaE8?pid=ImgDet&w=1024&h=683&rs=1" alt="here">
+                <div class="image-content">
+                    <h1>Suporior Rooms</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quis fugit quam ex aperiam fugiat harum aut nisi quod, debitis hic aspernatur tempora eius impedit quos accusamus</p>
+                    <button class="btn5">Book Now</button>
+                    <h2>$250 <span>per Day</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://th.bing.com/th/id/OIP.Ps8W-H9iNNJLpz4WUmDIfgHaD5?w=334&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="image-content">
+                    <h1>Suporior Rooms</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quis fugit quam ex aperiam fugiat harum aut nisi quod, debitis hic aspernatur tempora eius impedit quos accusamus</p>
+                    <button class="btn5">Book Now</button>
+                    <h2>$250 <span>per Day</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://th.bing.com/th/id/OIP._XuZby4A43FdQhGGOy_avwHaEK?w=272&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="image-content">
+                    <h1>Suporior Rooms</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quis fugit quam ex aperiam fugiat harum aut nisi quod, debitis hic aspernatur tempora eius impedit quos accusamus</p>
+                    <button class="btn5">Book Now</button>
+                    <h2>$250 <span>per Day</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://th.bing.com/th/id/OIP.90ZgcOs3xXVThac1Fe5YRAHaEY?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="image-content">
+                    <h1>Suporior Rooms</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quis fugit quam ex aperiam fugiat harum aut nisi quod, debitis hic aspernatur tempora eius impedit quos accusamus</p>
+                    <button class="btn5">Book Now</button>
+                    <h2>$250 <span>per Day</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://th.bing.com/th/id/OIP.haHQ27EXo8Sq1Pt5N_s1DwHaEK?w=326&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="image-content">
+                    <h1>Suporior Rooms</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quis fugit quam ex aperiam fugiat harum aut nisi quod, debitis hic aspernatur tempora eius impedit quos accusamus</p>
+                    <button class="btn5">Book Now</button>
+                    <h2>$250 <span>per Day</span></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <secction class="gallary" id="gallary">
+        <div class="gallary-content">
+            <h1>PHOTOS</h1>
+            <h2>Our <span>Gallary</span></h2>
+            <p>Excepteur sint occaecat non proident,sunt in culpa qui officia deserunt</p>
+        </div>
+        <div class="gallary-container">
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.anjIiToUiq7bDKVdWvbaYwHaFs?w=206&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="content">
+                    <h1>Hotel <span>TAJ</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, incidunt veritatis illo nam iste, eum deleniti quibusdam quae provident ipsam non obcaecati nihil voluptate autem ex in nisi eaque id!</p>
+                    <h2>Price:<span>$200</span></h2>
+                    <button class="btn6">Book Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.-hxX6S9oSHpZossm69yjCgHaEo?w=255&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="content">
+                    <h1>Hotel <span>TAJ</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae alias, reprehenderit voluptatem quisquam commodi expedita recusandae dolorum quo, ratione perspiciatis mollitia voluptas beatae ullam sequi delectus modi sunt optio. Optio.</p>
+                    <h2>Price:<span>$200</span></h2>
+                    <button class="btn6">Book Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.ZGRg9OUghfpfciTXqhqcRAHaFS?w=254&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="content">
+                    <h1>Hotel <span>TAJ</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, odit vero nostrum obcaecati dolor maxime! Dignissimos, et sunt soluta nam quaerat impedit at molestiae necessitatibus architecto similique vitae tempora incidunt?</p>
+                    <h2>Price:<span>$200</span></h2>
+                    <button class="btn6">Book Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.1zb1cn0F4Y_3LaquGGKReQHaE7?w=280&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="content">
+                    <h1>Hotel <span>TAJ</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae delectus consequuntur atque ea amet, qui placeat omnis eius explicabo eaque tempora id velit culpa aliquam? Molestias totam tempore libero voluptates.</p>
+                    <h2>Price:<span>$200</span></h2>
+                    <button class="btn6">Book Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.hOOJGITgRoTHFUJs-9qeHwHaE6?w=239&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="content">
+                    <h1>Hotel <span>TAJ</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi placeat pariatur fuga, voluptas nobis sunt repellat eligendi voluptatum aut dicta labore assumenda eaque minus non nostrum illum ullam ratione modi.</p>
+                    <h2>Price:<span>$200</span></h2>
+                    <button class="btn6">Book Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.5HiIvZJr1cSLGVOaamd_ZgHaEC?w=334&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="content">
+                    <h1>Hotel <span>TAJ</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum placeat delectus commodi neque consectetur harum, cum eligendi quia dolorem laborum, ipsa nam corrupti mollitia perferendis. Cum minus fuga voluptate eos!</p>
+                    <h2>Price:<span>$200</span></h2>
+                    <button class="btn6">Book Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.2PJAHvCF-xghvfsQJe-OzAHaDn?w=343&h=170&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="content">
+                    <h1>Hotel <span>TAJ</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellendus modi id vero quos officia facilis culpa eveniet tempora. Voluptates optio quos deleniti, obcaecati iure rerum cumque ex est nam!</p>
+                    <h2>Price:<span>$200</span></h2>
+                    <button class="btn6">Book Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.2PJAHvCF-xghvfsQJe-OzAHaDn?w=343&h=170&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="content">
+                    <h1>Hotel <span>TAJ</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quod assumenda? Quae tenetur facilis voluptates ipsam ut ducimus nemo dicta cupiditate, eaque asperiores et perspiciatis molestias nam saepe necessitatibus ad!</p>
+                    <h2>Price:<span>$200</span></h2>
+                    <button class="btn6">Book Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.9DFOrq7ROaMsWQF_awVaTwHaEK?w=329&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="here">
+                <div class="content">
+                    <h1>Hotel <span>TAJ</span></h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem distinctio suscipit modi error. Eos iure, ipsa molestiae delectus magnam quod et vel doloribus corrupti excepturi placeat nesciunt, neque iste quis!</p>
+                    <h2>Price:<span>$200</span></h2>
+                    <button class="btn6">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="contact">
+        <div class="us">
+          <img src="https://s3.amazonaws.com/freebiesupply/large/2x/facebook-logo-transparent.png" alt="here">
+          <img src="https://th.bing.com/th/id/R.3d74e8bfd4ef7985f7529bb9f7650eca?rik=RCvdo0dDvjxCWg&riu=http%3a%2f%2fwww.stickpng.com%2fassets%2fimages%2f580b57fcd9996e24bc43c53e.png&ehk=%2fkYf7%2bIY6TUkpUQzwclpivMLQ8ynEgcZYehDGOzbu0E%3d&risl=&pid=ImgRaw&r=0" alt="here">
+          <img src="https://th.bing.com/th/id/R.9c3e349e05d7b367d158cdad5b5d423a?rik=wfGISHBDSPNQkg&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2finstagram-png-transparent%2finstagram-png-transparent-22.png&ehk=b2KPcH4S4uMDOgurFGqctT550VIBdceWr8s6Fy7ZqHo%3d&risl=&pid=ImgRaw&r=0" alt="here">
+        </div>
+        <nav class="bottom">
+          <a href="#">Contact Us</a>
+          <a href="#">Our Services</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms&Conditions</a>
+          <a href="#">Movies</a>
+        </nav>
+        <h3><span>Hotel Taj</span> Copyright @ 2023 - All rights reserved # Designed By <span>Sai Prakash</span></h3>
+      </div>
+</body>
+</html>
